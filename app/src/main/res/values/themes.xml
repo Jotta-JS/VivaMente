@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Vivamente" parent="@style/Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:statusBarColor">@color/vm_background</item>
+        <item name="android:navigationBarColor">@color/vm_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:colorControlActivated">@color/vm_cards_purple</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="NavBarInactive" parent="Base.Theme.Vivamente">
+        <item name="android:fontFamily">@font/roboto_medium_new</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="NavBarActive" parent="Base.Theme.Vivamente">
+        <item name="android:textSize">15sp</item>
+        <item name="colorOnSurface">@color/vmNavBarOut</item>
+        <item name="colorOnSurfaceVariant">@color/vmNavBarIn</item>
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/vmNavBarIn</item>
+        <item name="itemIconTint">@color/vm_navbar_icon_inactive</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlayExtended" parent="Base.Theme.Vivamente">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">25dp</item>
+    </style>
+
+    <style name="EnterTheme" parent="Base.Theme.Vivamente">
+        <item name="android:statusBarColor">@color/enter_activity_background</item>
+        <item name="android:navigationBarColor">@color/enter_activity_background</item>
+    </style>
+
+    <style name="ActivityLoginOrRegister" parent="Base.Theme.Vivamente">
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textFontWeight" tools:ignore="NewApi">700</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/browm_login</item>
+    </style>
+
+    <style name="Theme.Vivamente" parent="Base.Theme.Vivamente" />
+</resources>

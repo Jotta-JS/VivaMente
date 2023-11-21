@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="vm_background">#FFFAEF</color>
+    <color name="vmNavBarOut">#FAF0DE</color>
+    <color name="vmNavBarIn">#ECE0C7</color>
+    <color name="vm_card_elevation">#F4EAD5</color>
+    <color name="vm_TextIcons_black">#282828</color>
+    <color name="vm_TextIcons_white">#FFFFFF</color>
+    <color name="vm_subtitles_and_texts">#878480</color>
+    <color name="vm_purple_titles">#532581</color>
+    <color name="white_track">#66FFFFFF</color>
+    <color name="purple_track">#66795495</color>
+    <color name="vm_cards_purple">#795495</color>
+    <color name="vm_navbar_icon_active">#201F1B</color>
+    <color name="vm_navbar_icon_inactive">#4F4C45</color>
+    <color name="calendar_header_invisible">#00FFFFFF</color>
+    <color name="enter_activity_background">#070129</color>
+    <color name="enter_activity_indicator_yellow">#EDB108</color>
+    <color name="enter_activity_track_white">#31FFFFFF</color>
+    <color name="enter_purple_indicator">#CB96FF</color>
+    <color name="button_purple">#8B74BE</color>
+    <color name="browm_login">#53400A</color>
+    <color name="background_button_light">#F1E8CD</color>
+    <color name="invisible">#00FFFFFF</color>
+    <color name="cardview_red">#40ED081B</color>
+    <color name="cardview_red_secondary">#530A10</color>
+    <color name="cardview_red_quartenary">#DE9EA4</color>
+    <color name="cardview_red_terciary">#EBAAAF</color>
+    <color name="register_yellow">#D0B22E</color>
+</resources>

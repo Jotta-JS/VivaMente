@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+    android:theme="@style/Base.Theme.Vivamente"
+    android:background="@color/vm_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            android:id="@+id/hello_user"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/roboto_medium_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ola_nome_sobrenome"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="@color/vm_purple_titles"
+            />
+
+        <TextView
+            android:id="@+id/hello_user_subtitle"
+            app:layout_constraintTop_toBottomOf="@id/hello_user"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/roboto_medium_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tenha_um_otimo_dia"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:textColor="@color/vm_subtitles_and_texts"/>
+
+        <TextView
+            android:id="@+id/search_bar"
+            app:layout_constraintTop_toBottomOf="@id/hello_user_subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_bar_shape"
+            android:padding="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/pesquisar"
+            android:fontFamily="@font/roboto_regular_new"
+            app:drawableStartCompat="@drawable/baseline_search_26" />
+
+        <RelativeLayout
+            android:id="@+id/update_yourself"
+            app:layout_constraintTop_toBottomOf="@id/search_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="15dp"
+            android:background="@drawable/search_bar_shape">
+                <TextView
+                    android:id="@+id/se_atualize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/se_atualize"
+                    android:fontFamily="@font/roboto_medium_new"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/vm_purple_titles"
+                    />
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium_new"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/fique_atualizado"
+                    android:textSize="12sp"
+                    android:textColor="@color/vm_subtitles_and_texts"/>
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:layout_width="109dp"
+                android:layout_height="66dp"
+                android:src="@drawable/undraw_push_notifications_re_t84m_1"
+                android:contentDescription="@string/todo" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reminders_title"
+            app:layout_constraintTop_toBottomOf="@id/update_yourself"
+            android:gravity="center_vertical"
+            android:paddingVertical="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/lembretes_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lembretes"
+                android:fontFamily="@font/roboto_medium_new"
+                android:textColor="@color/vm_purple_titles"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/see_all"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_tudo"
+                android:fontFamily="@font/roboto_medium_new"
+                android:textColor="@color/vm_subtitles_and_texts"
+                android:textSize="15sp"
+                android:textAlignment="textEnd"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                app:layout_constraintTop_toBottomOf="@id/reminders_title"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/remedy_card"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_width="175dp"
+                android:background="@drawable/card_gradient_shape"
+                android:layout_height="125dp">
+
+                    <RelativeLayout
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        tools:ignore="RelativeOverlap">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/remedy_progress_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:trackColor="@color/white_track"
+                            app:indicatorColor="@color/white"
+                            android:progress="50"
+                            app:indicatorSize="50dp"
+                            app:trackThickness="6dp"
+                            app:trackCornerRadius="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/roboto_light_new"
+                            android:text="@string/_2_4"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/drugs_50"
+                        android:contentDescription="@string/remedy_icon" />
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_medium_new"
+                    android:text="@string/remedios"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                app:layout_constraintTop_toBottomOf="@id/reminders_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="10dp"
+                android:id="@+id/compromises_card"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="175dp"
+                android:background="@drawable/card_shape_home"
+                android:layout_height="125dp">
+
+                    <RelativeLayout
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        tools:ignore="RelativeOverlap">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/remedy_progress_bar2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:trackColor="@color/purple_track"
+                            app:indicatorColor="@color/vm_cards_purple"
+                            android:progress="50"
+                            app:indicatorSize="50dp"
+                            app:trackThickness="6dp"
+                            app:trackCornerRadius="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/roboto_light_new"
+                            android:text="@string/_2_4"
+                            android:textColor="@color/vm_cards_purple"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ticket"
+                        android:contentDescription="@string/remedy_icon" />
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/compromissos"
+                    android:fontFamily="@font/roboto_bold_new"
+                    android:textColor="@color/vm_cards_purple"
+                    android:textSize="18sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                app:layout_constraintTop_toBottomOf="@id/remedy_card"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_width="175dp"
+                android:layout_height="125dp"
+                android:layout_below="@+id/remedy_card"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/card_shape_home"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="RelativeOverlap">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/remedy_progress_bar3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progress="50"
+                            app:indicatorColor="@color/vm_cards_purple"
+                            app:indicatorSize="50dp"
+                            app:trackColor="@color/purple_track"
+                            app:trackCornerRadius="8dp"
+                            app:trackThickness="6dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/roboto_light_new"
+                            android:text="@string/_2_4"
+                            android:textColor="@color/vm_cards_purple"
+                            android:textSize="15sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/remedy_icon"
+                        android:src="@drawable/running" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_bold_new"
+                    android:text="@string/exerc_cios"
+                    android:textColor="@color/vm_cards_purple"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                app:layout_constraintTop_toBottomOf="@id/compromises_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_width="175dp"
+                android:layout_height="125dp"
+                android:layout_below="@+id/compromises_card"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/card_shape_home"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        tools:ignore="RelativeOverlap">
+
+                        <com.google.android.material.progressindicator.CircularProgressIndicator
+                            android:id="@+id/remedy_progress_bar4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progress="50"
+                            app:indicatorColor="@color/vm_cards_purple"
+                            app:indicatorSize="50dp"
+                            app:trackColor="@color/purple_track"
+                            app:trackCornerRadius="8dp"
+                            app:trackThickness="6dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_light_new"
+                            android:text="@string/_2_4"
+                            android:textColor="@color/vm_cards_purple"
+                            android:textSize="15sp"
+                            android:layout_centerInParent="true"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="@string/remedy_icon"
+                        android:src="@drawable/cards" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto_bold_new"
+                    android:text="@string/atv_cognitivas"
+                    android:textColor="@color/vm_cards_purple" />
+
+            </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:background="@color/vm_background"
+    android:theme="@style/Base.Theme.Vivamente"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back_button"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:layout_margin="5dp"
+        app:backgroundTint="@color/vm_background"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/helper_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/cadastro"
+        style="@style/ActivityLoginOrRegister"
+        android:textSize="35sp"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="start" />
+
+
+    <TextView
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome_completo"
+        android:layout_gravity="start"
+        style="@style/ActivityLoginOrRegister"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="10dp"
+        app:boxBackgroundColor="@color/vmNavBarOut"
+        app:boxStrokeWidth="0dp"
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/name_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="@string/digite_seu_nome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_txt_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:layout_gravity="start"
+        style="@style/ActivityLoginOrRegister"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        app:boxBackgroundColor="@color/vmNavBarOut"
+        app:boxStrokeWidth="0dp"
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/email_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="@string/digite_seu_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_txt_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/senha"
+        android:layout_gravity="start"
+        style="@style/ActivityLoginOrRegister"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        app:boxBackgroundColor="@color/vmNavBarOut"
+        app:boxStrokeWidth="0dp"
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/password_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="@string/digite_sua_senha">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_txt_regitser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmar_senha"
+        android:layout_gravity="start"
+        style="@style/ActivityLoginOrRegister"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        app:boxBackgroundColor="@color/vmNavBarOut"
+        app:boxStrokeWidth="0dp"
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/confirm_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="@string/digite_sua_senha_novamente">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirm_password_txt_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="18dp"
+        android:text="@string/fazer_cadastro"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:backgroundTint="@color/button_purple"
+        app:elevation="0dp"
+        android:layout_marginTop="40dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended" />
+</LinearLayout>

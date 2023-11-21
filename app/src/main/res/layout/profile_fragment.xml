@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Base.Theme.Vivamente"
+    android:background="@color/vm_background"
+    android:paddingHorizontal="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="-50dp"
+        android:id="@+id/constraint_texts"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:background="@drawable/card_shape_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_picture"
+        >
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium_new"
+            android:text="@string/usu_rio_nome"
+            android:textColor="@color/vm_TextIcons_black"
+            android:textSize="30sp"
+            android:layout_marginBottom="17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/profile_picture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circle_shape"
+        android:elevation="5dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toTopOf="@id/constraint_texts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/avatar2"
+            android:contentDescription="@string/imagem_de_perfil"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/blood_type_view"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/shape_profile_page_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_texts">
+
+        <TextView
+            android:id="@+id/blood_type_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@id/blood_type_badge"
+            android:layout_marginBottom="5dp"
+            android:text="@string/tipo_sangu_neo"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blood_type_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-7dp"
+            android:text="@string/b"
+            android:textColor="@color/vm_cards_purple"
+            android:textSize="20sp" />
+        <ImageView
+            android:id="@+id/blood_type_badge"
+            android:layout_width="28dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/blood_lined"
+            android:contentDescription="@string/tipo_sangu_neo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/day_type_view"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/shape_profile_page_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_texts">
+        <TextView
+            android:id="@+id/day_type_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grau_do_dia"
+            android:layout_alignTop="@id/day_type_badge"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/day_type_title"
+            android:text="@string/leve"
+            android:textSize="20sp"
+            android:textColor="@color/vm_cards_purple"/>
+
+        <ImageView
+            android:id="@+id/day_type_badge"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile_card"
+            android:contentDescription="@string/tipo_sangu_neo" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/medic_conditions_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_profile_page_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blood_type_view">
+
+        <ImageView
+            android:id="@+id/medic_conditions_badge"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vital"
+            android:layout_marginHorizontal="24dp"
+            android:contentDescription="@string/tipo_sangu_neo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/medic_conditions_badge"
+                android:layout_toEndOf="@id/medic_conditions_badge"
+                android:text="@string/condicoes_medicas"
+                android:textSize="9sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancer_de_mama"
+                android:layout_alignBottom="@id/medic_conditions_badge"
+                android:layout_toEndOf="@id/medic_conditions_badge"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold_new"
+                android:textColor="@color/vm_TextIcons_black"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/medicaments_now"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_profile_page_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/medic_conditions_view">
+
+        <ImageView
+            android:id="@+id/medicaments_badge"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/vital"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="24dp"
+            android:contentDescription="@string/tipo_sangu_neo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/medicamentos_atuais"
+                android:layout_alignTop="@id/medicaments_badge"
+                android:layout_toEndOf="@id/medicaments_badge"
+                android:textSize="9sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rivastigmina"
+                android:layout_alignBottom="@id/medicaments_badge"
+                android:layout_toEndOf="@id/medicaments_badge"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold_new"
+                android:textColor="@color/vm_TextIcons_black"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/alergies"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_profile_page_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/medicaments_now">
+
+        <ImageView
+            android:id="@+id/alergies_badge"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/vital"
+            android:layout_marginHorizontal="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/tipo_sangu_neo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/alergies_badge"
+                android:layout_toEndOf="@id/alergies_badge"
+                android:text="@string/alergias"
+                android:textSize="9sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/poeira"
+                android:layout_alignBottom="@id/alergies_badge"
+                android:layout_toEndOf="@id/alergies_badge"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_bold_new"
+                android:textColor="@color/vm_TextIcons_black"/>
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

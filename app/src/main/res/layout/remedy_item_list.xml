@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/cardview_red"
+    app:cardCornerRadius="20dp"
+    android:layout_marginVertical="15dp"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_height="220dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/cardview_image_remedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@id/cardview_pills_remedy"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/medical"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:background="@drawable/cardview_shape_unique"
+            android:backgroundTint="@color/cardview_red_terciary"
+            android:padding="10dp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_medium_new"
+            android:textColor="@color/cardview_red_secondary"
+            android:id="@+id/cardview_days_left"
+            android:layout_alignTop="@id/cardview_remedy_time"
+            android:layout_alignBottom="@id/cardview_remedy_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/por_30_dias"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/cardview_name_remedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:fontFamily="@font/roboto_bold_new"
+            android:textColor="@color/cardview_red_secondary"
+            android:layout_toEndOf="@id/cardview_image_remedy"
+            android:layout_alignParentTop="true"
+            android:text="@string/paracetamol"/>
+        
+        <TextView
+            android:id="@+id/cardview_pills_remedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:textSize="12sp"
+            android:gravity="start|center_vertical"
+            android:text="@string/_3_comprimidos"
+            android:background="@drawable/pills_shape_unique"
+            android:backgroundTint="@color/cardview_red_terciary"
+            android:textColor="@color/cardview_red_secondary"
+            android:layout_alignBottom="@id/cardview_quantity_remedy"
+            android:fontFamily="@font/roboto_medium_new"
+            android:layout_below="@id/cardview_name_remedy"
+            android:layout_alignStart="@id/cardview_name_remedy"
+            />
+
+        <TextView
+            android:id="@+id/cardview_quantity_remedy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/_250mg_via_oral"
+            android:textSize="12sp"
+            android:background="@drawable/pills_shape_second"
+            android:backgroundTint="@color/cardview_red_quartenary"
+            android:textColor="@color/cardview_red_secondary"
+            android:fontFamily="@font/roboto_medium_new"
+            android:layout_below="@id/cardview_name_remedy"
+            android:layout_toEndOf="@id/cardview_pills_remedy"
+            />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:background="@drawable/cardview_shape_unique"
+            android:backgroundTint="@color/cardview_red_terciary"
+            android:padding="15dp"
+            android:fontFamily="@font/roboto_medium_new"
+            android:textColor="@color/cardview_red_secondary"
+            android:id="@+id/cardview_remedy_time"
+            android:layout_below="@id/cardview_pills_remedy"
+            android:layout_alignStart="@id/cardview_pills_remedy"
+            android:layout_alignEnd="@id/cardview_quantity_remedy"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tomar_s_12_30"
+            android:textSize="15sp"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

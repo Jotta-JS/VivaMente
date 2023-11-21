@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--O id dos itens aqui deve ser o mesmo do arquivo navigation-->
+    <item
+        android:id="@+id/homePage"
+        android:icon="@drawable/home"
+        android:title="@string/pagina_inicial" />
+
+    <item
+        android:id="@+id/reminders"
+        android:icon="@drawable/reminders"
+        android:title="@string/lembretes" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/profile_icon"
+        android:title="@string/meu_perfil" />
+
+</menu>

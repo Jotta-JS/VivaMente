@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bgloginimage2"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/vm_title_login"
+        android:contentDescription="@string/background" />
+
+    <TextView
+        android:paddingHorizontal="40dp"
+        android:id="@+id/vm_title_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/register_button_choose"
+        android:text="@string/vivamente"
+        android:textSize="42sp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/roboto"
+        android:textFontWeight="800"
+        android:textColor="@color/browm_login"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/register_button_choose"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_above="@+id/login_button_choose"
+        android:layout_marginBottom="20dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended"
+        android:fontFamily="@font/roboto_bold_new"
+        android:paddingVertical="18dp"
+        android:text="@string/fazer_cadastro"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/browm_login"
+        android:textSize="22sp"
+        app:backgroundTint="@color/background_button_light" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/login_button_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contact_text"
+        android:layout_marginBottom="20dp"
+        app:elevation="0dp"
+        android:layout_marginHorizontal="40dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlayExtended"
+        android:fontFamily="@font/roboto_medium_new"
+        android:paddingVertical="18dp"
+        android:text="@string/fazer_login"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:backgroundTint="@color/button_purple" />
+
+    <LinearLayout
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/contact_text"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular_new"
+            android:text="@string/algo_deu_errado"
+            android:textColor="@color/vm_TextIcons_black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold_new"
+            android:text="@string/entre_em_contato"
+            android:textColor="@color/vm_TextIcons_black"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
